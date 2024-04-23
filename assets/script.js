@@ -49,6 +49,21 @@ arrow_right.addEventListener("click", function () {
   generateDots();
 });
 
+const arrow_left = document.querySelector(".arrow_left");
+arrow_left.addEventListener("click", function () {
+  index = index - 1;
+  if (index < 0) {
+    index = slides.length - 1;
+  }
+
+  const image = document.querySelector("#banner img");
+  const texte = document.querySelector("#banner p");
+  texte.innerHTML = slides[index].tagLine;
+  image.src = "./assets/images/slideshow/" + slides[index].image;
+  dots.innerHTML = "";
+  generateDots();
+});
+
 /*
 for (let i = 0; i < slides.length; i++){
 
