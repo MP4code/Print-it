@@ -63,24 +63,3 @@ arrow_left.addEventListener("click", function () {
   dots.innerHTML = "";
   generateDots();
 });
-
-/*
-for (let i = 0; i < slides.length; i++){
-
-
-
-
-
-const arrow_left  = document.querySelector(".arrow_left");
-arrow_left.addEventListener(
-  "click",
-  function () {
-	let dot = document.querySelector(".dot");
-	dot.classList.remove("dot"); 
-  },
-)
-console.log(arrow_left);
-
-
-
-*/
