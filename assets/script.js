@@ -35,6 +35,20 @@ const generateDots = () => {
 
 generateDots();
 
+const arrow_right = document.querySelector(".arrow_right");
+arrow_right.addEventListener("click", function () {
+  index = index + 1;
+  if (index > slides.length - 1) {
+    index = 0;
+  }
+  const image = document.querySelector("#banner img");
+  const texte = document.querySelector("#banner p");
+  texte.innerHTML = slides[index].tagLine;
+  image.src = "./assets/images/slideshow/" + slides[index].image;
+  dots.innerHTML = "";
+  generateDots();
+});
+
 /*
 for (let i = 0; i < slides.length; i++){
 
